@@ -26,6 +26,7 @@ public class ToDoController {
      */
     @GetMapping(value = "/test")
     public String test(ContentDTO contentDTO) {
+    	System.out.println("123");
         return "Success";
     }
 	
