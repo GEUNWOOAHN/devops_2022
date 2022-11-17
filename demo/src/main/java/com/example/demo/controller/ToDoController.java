@@ -5,8 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.ContentDTO;
@@ -36,7 +36,7 @@ public class ToDoController {
      * @return 
      */
     @PostMapping(value = "/write")
-    public ResponseEntity<ContentDTO> save(@RequestPart ContentDTO contentDTO) {
+    public ResponseEntity<ContentDTO> save(@RequestBody ContentDTO contentDTO) {
         return new ResponseEntity<ContentDTO>(toDoService.save(contentDTO), HttpStatus.OK);
     }
 }
