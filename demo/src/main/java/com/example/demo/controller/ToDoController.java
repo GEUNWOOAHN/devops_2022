@@ -26,7 +26,7 @@ public class ToDoController {
      */
     @GetMapping(value = "/test")
     public String test(ContentDTO contentDTO) {
-        return "success";
+        return "good";
     }
 	
 	
