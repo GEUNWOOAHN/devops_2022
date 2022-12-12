@@ -36,7 +36,7 @@ public class ToDoController {
      * @return 
      */
     @PostMapping(value = "/write")
-    public ResponseEntity<ContentDTO> save(@RequestBody ContentDTO contentDTO) {
+    public ResponseEntity<ContentDTO> save(ContentDTO contentDTO) {
         return new ResponseEntity<ContentDTO>(toDoService.save(contentDTO), HttpStatus.OK);
     }
 }
